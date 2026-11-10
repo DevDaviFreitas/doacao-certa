@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --azul-profundo: #0B3C5D;
+    --laranja-solidario:#C2410C;
+    --vermelho-urgente:#B91C1C;
+    --ambar-atencao:#78350F;
+    --verde-atendido:#15803D;
+    --grafite:#1E293B;
+
+}
