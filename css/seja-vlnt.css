@@ -1,0 +1,377 @@
+/* ===== BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores do tema claro. Se mudar aqui, a página inteira muda. */
+:root {
+    --fundo: #f8fafc;
+    --fundo-cartao: #ffffff;
+    --fundo-apresentacao: #e8f0f7;
+    --texto: #1e293b;
+    --texto-suave: #475569;
+    --azul: #0b3c5d;
+    --laranja: #c2410c;
+    --borda: #cbd5e1;
+    --cabecalho: #3b3f4a;
+}
+
+/* Cores do tema escuro (ativado pelo JavaScript) */
+:root[data-tema="escuro"] {
+    --fundo: #0f172a;
+    --fundo-cartao: #1e293b;
+    --fundo-apresentacao: #172554;
+    --texto: #e2e8f0;
+    --texto-suave: #94a3b8;
+    --azul: #7dd3fc;
+    --laranja: #fb923c;
+    --borda: #475569;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+/* Limita a largura do conteúdo e centraliza */
+.container {
+    width: 100%;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===== CABEÇALHO ===== */
+.header {
+    display: flex;
+    flex-wrap: wrap;            /* no celular, os itens quebram de linha */
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--cabecalho);
+}
+
+.logo2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo-icone {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 30%;
+}
+
+.logo-texto {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background: #ffffff;
+    color: #1f2937;
+}
+
+/* Botões A- A+ e tema */
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.fonte,
+.tema {
+    display: flex;
+    align-items: center;
+    border: 1px solid #6b7280;
+    border-radius: 999px;
+    padding: 0.2rem;
+}
+
+.fonte button,
+.tema button {
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.3rem 0.7rem;
+}
+
+.fonte button:hover,
+.tema button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.tema button.ativo {
+    background: #ffffff;
+    color: #1f2937;
+}
+
+.divisor {
+    width: 1px;
+    height: 1.2rem;
+    background: #6b7280;
+}
+
+/* ===== APRESENTAÇÃO ===== */
+.apresentacao {
+    background: var(--fundo-apresentacao);
+    padding: 2.5rem 0;
+}
+
+.etiqueta {
+    color: var(--laranja);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.apresentacao h1 {
+    color: var(--azul);
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.apresentacao p:last-child {
+    max-width: 32rem;
+    font-size: 0.9375rem;
+}
+
+/* ===== CONTEÚDO: formulário + lateral ===== */
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 17rem;   /* formulário grande, lateral estreita */
+    gap: 1.5rem;
+    align-items: start;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.cartao {
+    background: var(--fundo-cartao);
+    border: 1px solid var(--borda);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.cartao h2 {
+    color: var(--azul);
+}
+
+.cartao-formulario h2 {
+    font-size: 1.5rem;
+}
+
+.aviso-campos {
+    font-size: 0.75rem;
+    margin: 0.5rem 0 1.25rem;
+}
+
+.obrigatorio {
+    color: var(--laranja);
+}
+
+/* ===== FORMULÁRIO ===== */
+.campo {
+    margin-bottom: 1.1rem;
+}
+
+label,
+legend {
+    font-size: 0.8125rem;
+    font-weight: 700;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    background: var(--fundo-cartao);
+    color: var(--texto);
+    border: 1px solid var(--azul);
+    border-radius: 0.4rem;
+    font-family: inherit;
+    font-size: 0.875rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Destaque quando o campo está selecionado (ajuda quem usa teclado) */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 2px;
+}
+
+small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.6875rem;
+    color: var(--texto-suave);
+}
+
+/* Grupo de checkboxes */
+.tipos {
+    border: 1px solid var(--borda);
+    border-radius: 0.4rem;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.1rem;
+}
+
+legend {
+    padding: 0 0.3rem;
+}
+
+legend small {
+    display: inline;
+    font-weight: 400;
+}
+
+.tipos-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1rem;
+}
+
+.tipos-lista label,
+.campo-aceite label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+/* Aceite de privacidade */
+.campo-aceite {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.campo-aceite label {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+/* Botão de enviar */
+.botao-enviar {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--laranja);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.botao-enviar:hover {
+    filter: brightness(0.9);
+}
+
+/* ===== LATERAL ===== */
+.cartao-lateral h2 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.5rem;
+}
+
+.cartao-lateral p,
+.cartao-lateral li {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.cartao-lateral ul {
+    padding-left: 1.2rem;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background: #0b3c5d;
+    color: #ffffff;
+    padding: 2rem 0;
+    font-size: 0.75rem;
+}
+
+.rodape p {
+    margin-bottom: 0.6rem;
+}
+
+.rodape a {
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVO ===== */
+
+/* Tablet: lateral vai para baixo do formulário */
+@media (max-width: 860px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Celular: menos espaço e opções em uma coluna */
+@media (max-width: 520px) {
+    .header {
+        padding: 0.75rem 1rem;
+        justify-content: center;
+    }
+
+    .apresentacao h1 {
+        font-size: 1.6rem;
+    }
+
+    .cartao {
+        padding: 1rem;
+    }
+
+    .tipos-lista {
+        grid-template-columns: 1fr;
+    }
+}

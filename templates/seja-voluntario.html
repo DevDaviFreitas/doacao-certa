@@ -3,11 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Seja voluntário | Doação Certa</title>
+    <link rel="icon" type="image/x-icon" href="/imagens/logo-doacao-certa.jpeg">
+    <link rel="stylesheet" href="../css/seja-vlnt.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="logo1">
+            <a href="index.html" class="logo2">
+                <img src="../imagens/logo-doacao-certa.jpeg" alt="Logo Doação Certa" class="logo-icone">
+                <span class="logo-texto">Doação Certa</span>
+            </a>
+        </div>
+
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="solucao.html">Solução</a></li>
+                <li><a href="seja-voluntario.html" class="ativo" aria-current="page">Seja voluntário</a></li>
+                <li><a href="impacto.html">Impacto</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+            </ul>
+        </nav>
+
+        <div class="acoes">
+            <!--Botões de tamanho da fonte-->
+            <div class="fonte">
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir fonte">A-</button>
+                <span class="divisor"></span>
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar fonte">A+</button>
+            </div>
+            <!--Botões de tema claro e escuro-->
+            <div class="tema">
+                <button type="button" id="tema-claro" class="ativo" aria-label="Tema claro"><ion-icon name="sunny-outline"></ion-icon></button>
+                <button type="button" id="tema-escuro" aria-label="Tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
+            </div>
+        </div>
+    </header>
+    <!-- ===== TÍTULO DA PÁGINA ===== -->
+    <section class="apresentacao">
+        <div class="container">
+            <p class="etiqueta">VOLUNTARIADO</p>
+            <h1>Seja voluntário</h1>
+            <p>Conte como você pode ajudar. Vamos indicar o abrigo onde a sua habilidade faz mais falta, no horário em que você pode estar lá.</p>
+        </div>
+    </section>
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="container conteudo">
+        <!-- Formulário -->
+        <section class="cartao-formulario">
+            <h2>Cadastro de voluntário</h2>
+            <p class="aviso-campos">Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
+
+            <form action="#" method="post">
+
+                <div class="campo">
+                    <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone ou WhatsApp <span class="obrigatorio">*</span></label>
+                    <input type="tel" id="telefone" name="telefone" aria-describedby="dica-telefone" required>
+                    <small id="dica-telefone">Com DDD. Exemplo: (51) 99999-1234</small>
+                </div>
+
+                <div class="campo">
+                    <label for="regiao">Região onde você pode ajudar <span class="obrigatorio">*</span></label>
+                    <select id="regiao" name="regiao" required>
+                        <option value="">Selecione a região</option>
+                        <option value="centro">Centro</option>
+                        <option value="zona-norte">Zona Norte</option>
+                        <option value="zona-sul">Zona Sul</option>
+                        <option value="zona-leste">Zona Leste</option>
+                        <option value="zona-oeste">Zona Oeste</option>
+                    </select>
+                </div>
+
+                <!-- Grupo de checkboxes -->
+                <fieldset class="tipos">
+                    <legend>Como você pode ajudar? <span class="obrigatorio">*</span> <small>(escolha pelo menos uma)</small></legend>
+
+                    <div class="tipos-lista">
+                        <label><input type="checkbox" name="ajuda" value="saude"> Saúde e primeiros socorros</label>
+                        <label><input type="checkbox" name="ajuda" value="cozinha"> Cozinha</label>
+                        <label><input type="checkbox" name="ajuda" value="motorista"> Motorista com veículo</label>
+                        <label><input type="checkbox" name="ajuda" value="barco"> Barco ou resgate</label>
+                        <label><input type="checkbox" name="ajuda" value="triagem"> Triagem de doações</label>
+                        <label><input type="checkbox" name="ajuda" value="psicologico"> Apoio psicológico</label>
+                        <label><input type="checkbox" name="ajuda" value="criancas"> Cuidado com crianças</label>
+                        <label><input type="checkbox" name="ajuda" value="limpeza"> Limpeza e organização</label>
+                    </div>
+                </fieldset>
+
+                <div class="campo">
+                    <label for="horario">Quando você pode ajudar? <span class="obrigatorio">*</span></label>
+                    <select id="horario" name="horario" required>
+                        <option value="">Selecione um horário</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                        <option value="fim-de-semana">Fim de semana</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="observacoes">Algo mais que devemos saber? (opcional)</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" maxlength="300" aria-describedby="dica-observacoes"></textarea>
+                    <small id="dica-observacoes">Até 300 caracteres.</small>
+                </div>
+
+                <div class="campo-aceite">
+                    <input type="checkbox" id="privacidade" name="privacidade" required>
+                    <label for="privacidade">Li o aviso de privacidade e aceito que meus dados sejam usados apenas para contato sobre voluntariado. <span class="obrigatorio">*</span></label>
+                </div>
+
+                <button type="submit" class="botao-enviar">Quero ser voluntário</button>
+            </form>
+        </section>
+
+        <!-- Coluna lateral -->
+        <aside class="cartao-lateral">
+            <h2>Aviso de privacidade</h2>
+            <p>Este é um protótipo acadêmico: <strong>nenhum dado é enviado ou guardado.</strong> Ao clicar no botão, o site apenas confere se os campos estão corretos.</p>
+            <p>No produto real, seguindo a LGPD, os dados seriam usados só para contato sobre voluntariado e apagados quando você pedisse.</p>
+
+            <h2>Mais procurados agora</h2>
+            <ul>
+                <li>Saúde e primeiros socorros</li>
+                <li>Motoristas com veículo</li>
+                <li>Triagem de doações</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Doação Certa</strong> · Projeto acadêmico — FIAP Global Solution 2026/2 (CitizenTech)</p>
+            <p>Os abrigos e números da simulação são fictícios. Os dados reais citados no site têm a fonte indicada.</p>
+            <p><a href="equipe.html">Fontes e créditos</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/seja-voluntario.js"></script>
+
+    <!-- Biblioteca de ícones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
