@@ -6,11 +6,14 @@
 
 :root {
 
+    --color-fundo1: #F4F6F8;
+    --color-fundo2: #E5E7EB;
     --azul-profundo: #0B3C5D;
     --laranja-solidario:#C2410C;
     --vermelho-urgente:#B91C1C;
     --ambar-atencao:#78350F;
     --verde-atendido:#15803D;
     --grafite:#1E293B;
+    --color-branco: #FFFFFF;
 
 }
