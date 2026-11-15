@@ -20,24 +20,25 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="#">Solução</a></li>
-                <li><a href="#">Seja voluntário</a></li>
-                <li><a href="#">Impacto</a></li>
-                <li><a href="#">Equipe</a></li>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="solucao.html">Solução</a></li>
+                <li><a href="seja-voluntario.html">Seja voluntário</a></li>
+                <li><a href="impacto.html">Impacto</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
             </ul>
         </nav>
 
         <div class="acoes">
+            <!--Botões de tamanho da fonte-->
             <div class="fonte">
-                <button type="button" aria-label="Diminuir fonte">A-</button>
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir fonte">A-</button>
                 <span class="divisor"></span>
-                <button type="button" aria-label="Aumentar fonte">A+</button>
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar fonte">A+</button>
             </div>
-
+            <!--Botões de tema claro e escuro-->
             <div class="tema">
-                <button type="button" class="ativo" aria-label="Tema claro"><ion-icon
-                        name="sunny-outline"></ion-icon></button>
-                <button type="button" aria-label="Tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
+                <button type="button" id="tema-claro" class="ativo" aria-label="Tema claro"><ion-icon name="sunny-outline"></ion-icon></button>
+                <button type="button" id="tema-escuro" aria-label="Tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
             </div>
         </div>
     </header>
@@ -52,8 +53,8 @@
                 doadores e voluntários ajudem de verdade.</p>
 
             <div class="btn-main1">
-                <a href="#" class="btn1">Quero doar</a>
-                <a href="#" class="btn2">Seja voluntário</a>
+                <a href="solucao.html" class="btn1">Quero doar</a>
+                <a href="seja-voluntario.html" class="btn2">Seja voluntário</a>
             </div>
         </div>
 
@@ -81,17 +82,15 @@
         </div>
 
         <div class="card-stat">
-            <p class="numero">2.3 Milhões</p>
-            <p class="descricao">de pessoas afetadas pelas enchentes no<br> Rio Grande do Sul em maio de 2024, em<br>
-                469 municípios.</p>
-            <p class="fonte2">Fonte:<a href="#" class="fonte2">Defesa Civil RS, boletim de 25/05/2024</a></p>
+            <p class="numero">70%</p>
+            <p class="descricao">das cerca de 11 mil tonelaadas de doacoes<br>recebidas pelo Correio eram roupas. A<br>coleta de roupas chegou a ser suspensa.</p>
+            <p class="fonte2">Fonte:<a href="#" class="fonte2">Correio.via Diario do Nordeste(16/05/2024)</a></p>
         </div>
 
         <div class="card-stat">
-            <p class="numero">2.3 Milhões</p>
-            <p class="descricao">de pessoas afetadas pelas enchentes no<br> Rio Grande do Sul em maio de 2024, em<br>
-                469 municípios.</p>
-            <p class="fonte2">Fonte:<a href="#" class="fonte2">Defesa Civil RS, boletim de 25/05/2024</a></p>
+            <p class="numero">95 mil</p>
+            <p class="descricao">pessoas precisavam de roupas plus size,<br> que não cheggavam aos abrigos.</p>
+            <p class="fonte2">Fonte:<a href="#" class="fonte2">Agência Brasil, via Diario do Nordeste</a></p>
         </div>
     </main>
 
@@ -181,13 +180,26 @@
             crianças e pessoas com deficiência.</p>
     </main>
 
+
+
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Doação Certa</strong> · Projeto acadêmico — FIAP Global Solution 2026/2 (CitizenTech)</p>
+            <p>Os abrigos e números da simulação são fictícios. Os dados reais citados no site têm a fonte indicada.</p>
+            <p><a href="equipe.html">Fontes e créditos</a></p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="../js/index.js"></script>
+
+
+    <!-- Biblioteca de ícones -->
+
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 
-
-    <footer>
-        <p>&copy; 2024 Doação Certa. Todos os direitos reservados.</p>
-    </footer>
 </body>
-
 </html>
