@@ -1,13 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doação certa</title>
 
+    <link rel="icon" type="image/x-icon" href="/imagens/logo-doacao-certa.jpeg">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/impacto.css">
+
+
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="logo1">
+            <a href="index.html" class="logo2">
+                <img src="../imagens/logo-doacao-certa.jpeg" alt="Logo Doação Certa" class="logo-icone">
+                <span class="logo-texto">Doação Certa</span>
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" >Início</a></li>
+                <li><a href="solucao.html">Solução</a></li>
+                <li><a href="seja-voluntario.html">Seja voluntário</a></li>
+                <li><a href="impacto.html" class="ativo">Impacto</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+            </ul>
+        </nav>
+
+        <div class="acoes">
+            <!--Botões de tamanho da fonte-->
+            <div class="fonte">
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir fonte">A-</button>
+                <span class="divisor"></span>
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar fonte">A+</button>
+            </div>
+            <!--Botões de tema claro e escuro-->
+            <div class="tema">
+                <button type="button" id="tema-claro" class="ativo" aria-label="Tema claro"><ion-icon name="sunny-outline"></ion-icon></button>
+                <button type="button" id="tema-escuro" aria-label="Tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="impacto">
+            <span>IMPACTO</span>
+            <h1>O que muda quando a doação chega certa</h1>
+            <p>A doação certa transforma solidariedade em ajuda útil: menos desperdício, resposta mais rápida e cuidado
+                com quem mais precisa.</p>
+        </section>
+
+        <section id="quem-ganha">
+            <h2>Quem ganha</h2>
+            <div id="boxes-quem-ganha">
+                <div>
+                    <h4>Pessoas abrigadas</h4>
+                    <p>Recebem mais rápido água, remédios, fraldas e roupas do tamanho certo.</p>
+                </div>
+
+                <div>
+                    <h4>Doadores</h4>
+                    <p>Têm certeza de que a doação é util e não fazem viagens perdidas.</p>
+                </div>
+
+                <div>
+                    <h4>Voluntários</h4>
+                    <p>Vão para onde fazem diferença, de acordo com o que sabem fazer.</p>
+                </div>
+
+                <div>
+                    <h4>Coordenadores</h4>
+                    <p>Gastam menos tempo triando o que sobra e mais tempo cuidando das pessoas.</p>
+                </div>
+
+                <div>
+                    <h4>Poder público</h4>
+                    <p>Tem uma visão única para decidir onde reforçar.</p>
+                </div>
+
+                <div>
+                    <h4>Meio ambiente</h4>
+                    <p>Menos doações descartadas e menos transporte desnecessário.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="medir-resultado">
+            <h2>Como vamos medir os resultados</h2>
+
+            <p>As metas abaixo são sugestões para um piloto em um município. Eles ainda não são resultados.</p>
+
+            <table>
+                <thead>
+                    <th>Indicador</th>
+                    <th>Como medimos</th>
+                    <th>Meta no piloto</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Necessidades urgentes atendidas em 24h</td>
+                        <td>Urgentes atendidas em até 24h ÷ urgentes publicadas</td>
+                        <td>80% ou mais</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de doação útil</td>
+                        <td>Doações que estavam na lista de necessidades ÷ total recebido</td>
+                        <td>90% ou mais</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo médio de atendimento</td>
+                        <td>Horas entre publicar e atender uma necessidade</td>
+                        <td>Metade do tempo de antes</td>
+                    </tr>
+                    <tr>
+                        <td>Voluntários alocados</td>
+                        <td>Voluntários direcionados a um abrigo ÷ cadastrados</td>
+                        <td>70% ou mais</td>
+                    </tr>
+                    <tr>
+                        <td>Dados atualizados</td>
+                        <td>Abrigos atualizados nas últimas 12h ÷ abrigos ativos</td>
+                        <td>90% ou mais</td>
+                    </tr>
+                    <tr>
+                        <td>Satisfação</td>
+                        <td>Nota de 1 a 5 dada por coordenadores e doadores</td>
+                        <td>4 ou mais</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="ods">
+            <h2>ODS e metas da agenda 2030</h2>
+            
+            <div id="ods-boxes">
+                <div class="ods-box">
+                    <span>ODS 11 - meta 11.5</span>
+                    <h4>Cidades e comunidades sustentáveis</h4>
+                    <p>Reduzir o número de pessoas afetadas por desastres, inclusive os ligados à água, protegendo os mais vulneráveis.</p>
+                </div>
+
+                <div class="ods-box">
+                    <span>ODS 13 - meta 13.1</span>
+                    <h4>Ação contra a mudança global do clima</h4>
+                    <p>Reforçar a resiliência e a capacidade de adaptação a riscos climáticos e desastres naturais.</p>
+                </div>
+
+                <div class="ods-box">
+                    <span>ODS 3 - meta 3.d</span>
+                    <h4>Saúde e bem-estar</h4>
+                    <p>Reforçar a capacidade de alerta, redução e gestão de riscos à saúde.</p>
+                </div>
+
+                <div class="ods-box">
+                    <span>ODS 10 - meta 10.2</span>
+                    <h4>Redução das desigualdades</h4>
+                    <p>Promover a inclusão de todos, priorizando idosos, crianças e pessoas com deficiência.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="validacao">
+            <h2>Validação com pessoas reais</h2>
+            <p>Em andamento: vamos conversar com doadores, voluntários e coordenadores de abrigo e testar o protótipo com eles. Os resultados e as mudanças que fizermos por causa dessas conversas serão publicados aqui.</p>
+        </section>
+
+        <section id="proximos-passos">
+            <h2>Próximos passos</h2>
+            <ul>
+                <li><span>Outros desastres:</span> deslizamentos, secas incêncios, ondas de calor e frio.</li>
+                <li><span>Uso entre crises:</span> bancos de alimentos, CRAS e campanhas do agasalho mantêm a base ativa.</li>
+                <li><span>Integração com a Defesa Civil:</span> o alerta de emergência poderia trazer um link para a Doação Certa.</li>
+                <li><span>Whatsapp para coordenadores:</span> atualizar o que falta sem precisar abrir o site.</li>
+                <li><span>Empresas:</span> doações em lote direcionadas ao que falta, com relatório de impacto;</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Doação Certa</strong> · Projeto acadêmico — FIAP Global Solution 2026/2 (CitizenTech)</p>
+            <p>Os abrigos e números da simulação são fictícios. Os dados reais citados no site têm a fonte indicada.</p>
+            <p><a href="equipe.html">Fontes e créditos</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/seja-voluntario.js"></script>
+
+    <!-- Biblioteca de ícones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
