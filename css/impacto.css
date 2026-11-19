@@ -274,15 +274,10 @@ tbody tr:hover {
 #ods, 
 #validacao, 
 #proximos-passos {
-    padding: 40px 20px; 
+    padding: clamp(2.5rem, 5vw, 3.5rem) var(--page-padding);
 }
 
 @media (min-width: 1024px) {
-
-    #quem-ganha, #medir-resultado, #ods, #validacao, #proximos-passos,#impacto {
-        padding: 40px 150px 50px 130px;
-    }
-
     #validacao p {
         width: 60%;
     }

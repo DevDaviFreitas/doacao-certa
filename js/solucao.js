@@ -1,28 +1,38 @@
 // ===== DADOS DOS ABRIGOS  =====
 var abrigos = [
-    { nome: "Igreja Nossa Senhora das Ilhas", tipo: "Igreja", regiao: "Ilhas", atualizado: "há 5 min", ocupacao: 118, capacidade: 120, sobra: "Roupas adultas usadas, Brinquedos.",
-      precisa: [
-        { item: "Água potável", urgencia: "alta", falta: 80, unidade: "fardos" },
-        { item: "Kit de primeiros socorros", urgencia: "alta", falta: 8, unidade: "kits" },
-        { item: "Fraldas infantis", urgencia: "media", falta: 20, unidade: "pacotes" } ] },
-    { nome: "Escola Municipal do Porto", tipo: "Escola", regiao: "Porto Novo", atualizado: "há 50 min", ocupacao: 126, capacidade: 130, sobra: "Brinquedos.",
-      precisa: [
-        { item: "Leite em pó", urgencia: "alta", falta: 4, unidade: "latas" },
-        { item: "Fraldas infantis", urgencia: "alta", falta: 30, unidade: "pacotes" },
-        { item: "Cobertores", urgencia: "media", falta: 25, unidade: "unidades" } ] },
-    { nome: "Ginásio Municipal Central", tipo: "Ginásio", regiao: "Centro", atualizado: "há 12 min", ocupacao: 284, capacidade: 300, sobra: "Roupas adultas usadas, Calçados.",
-      precisa: [
-        { item: "Água potável", urgencia: "alta", falta: 120, unidade: "fardos" },
-        { item: "Colchões", urgencia: "alta", falta: 40, unidade: "unidades" },
-        { item: "Produtos de limpeza", urgencia: "baixa", falta: 20, unidade: "kits" } ] },
-    { nome: "Centro Comunitário Morro Alto", tipo: "Centro comunitário", regiao: "Morro Alto", atualizado: "há 2 h 20 min", antigo: true, ocupacao: 72, capacidade: 100, sobra: "Roupas adultas usadas.",
-      precisa: [
-        { item: "Alimentos não perecíveis", urgencia: "alta", falta: 30, unidade: "cestas" },
-        { item: "Água potável", urgencia: "media", falta: 40, unidade: "fardos" } ] },
-    { nome: "Centro Comunitário Esperança", tipo: "Centro comunitário", regiao: "Vila Esperança", atualizado: "há 35 min", ocupacao: 52, capacidade: 80, sobra: "Roupas adultas usadas, Calçados.",
-      precisa: [
-        { item: "Cobertores", urgencia: "media", falta: 30, unidade: "unidades" },
-        { item: "Kit de primeiros socorros", urgencia: "baixa", falta: 5, unidade: "kits" } ] }
+    {
+        nome: "Igreja Nossa Senhora das Ilhas", tipo: "Igreja", regiao: "Ilhas", atualizado: "há 5 min", ocupacao: 118, capacidade: 120, sobra: "Roupas adultas usadas, Brinquedos.",
+        precisa: [
+            { item: "Água potável", urgencia: "alta", falta: 80, unidade: "fardos" },
+            { item: "Kit de primeiros socorros", urgencia: "alta", falta: 8, unidade: "kits" },
+            { item: "Fraldas infantis", urgencia: "media", falta: 20, unidade: "pacotes" }]
+    },
+    {
+        nome: "Escola Municipal do Porto", tipo: "Escola", regiao: "Porto Novo", atualizado: "há 50 min", ocupacao: 126, capacidade: 130, sobra: "Brinquedos.",
+        precisa: [
+            { item: "Leite em pó", urgencia: "alta", falta: 4, unidade: "latas" },
+            { item: "Fraldas infantis", urgencia: "alta", falta: 30, unidade: "pacotes" },
+            { item: "Cobertores", urgencia: "media", falta: 25, unidade: "unidades" }]
+    },
+    {
+        nome: "Ginásio Municipal Central", tipo: "Ginásio", regiao: "Centro", atualizado: "há 12 min", ocupacao: 284, capacidade: 300, sobra: "Roupas adultas usadas, Calçados.",
+        precisa: [
+            { item: "Água potável", urgencia: "alta", falta: 120, unidade: "fardos" },
+            { item: "Colchões", urgencia: "alta", falta: 40, unidade: "unidades" },
+            { item: "Produtos de limpeza", urgencia: "baixa", falta: 20, unidade: "kits" }]
+    },
+    {
+        nome: "Centro Comunitário Morro Alto", tipo: "Centro comunitário", regiao: "Morro Alto", atualizado: "há 2 h 20 min", antigo: true, ocupacao: 72, capacidade: 100, sobra: "Roupas adultas usadas.",
+        precisa: [
+            { item: "Alimentos não perecíveis", urgencia: "alta", falta: 30, unidade: "cestas" },
+            { item: "Água potável", urgencia: "media", falta: 40, unidade: "fardos" }]
+    },
+    {
+        nome: "Centro Comunitário Esperança", tipo: "Centro comunitário", regiao: "Vila Esperança", atualizado: "há 35 min", ocupacao: 52, capacidade: 80, sobra: "Roupas adultas usadas, Calçados.",
+        precisa: [
+            { item: "Cobertores", urgencia: "media", falta: 30, unidade: "unidades" },
+            { item: "Kit de primeiros socorros", urgencia: "baixa", falta: 5, unidade: "kits" }]
+    }
 ];
 
 var peso = { alta: 3, media: 2, baixa: 1 };            // pontos por urgência
