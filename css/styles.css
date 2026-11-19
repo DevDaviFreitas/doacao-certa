@@ -28,3 +28,221 @@ body {
 h1,h2,h3,h4 {
     font-family: 'Poppins', sans-serif;
 }
+
+/* =========================================================
+   CABEÇALHO E RODAPÉ — iguais em todas as páginas
+   (ficam aqui porque todas as páginas carregam este arquivo)
+   ========================================================= */
+:root {
+    --cabecalho: #3b3f4a;
+    --rodape: #0b3c5d;
+}
+
+:root[data-tema="escuro"] {
+    --cabecalho: #1e293b;
+    --rodape: #020617;
+}
+
+/* CABEÇALHO */
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* menu no centro exato */
+    align-items: center;
+    height: 68px;
+    padding: 0 80px;
+    background: var(--cabecalho);
+    transition: background-color 0.3s;
+}
+
+.logo2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo2 img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.logo-icone {
+    border-radius: 30%;
+    margin-left: 72px; /* em px: o A-/A+ não empurra a logo */
+}
+
+.logo-texto {
+    color: var(--color-branco);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--color-branco);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu a.ativo,
+.menu a:hover {
+    background: var(--color-branco);
+    color: #1f2937;
+}
+
+/* Ações */
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-self: end;
+}
+
+/* A- | A+ */
+.fonte {
+    display: flex;
+    align-items: center;
+    border: 1px solid #6b7280;
+    border-radius: 999px;
+    padding: 4px 7px;
+}
+
+.fonte button {
+    background: transparent;
+    border: none;
+    color: var(--color-branco);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    padding: 5px 12px;
+}
+
+.fonte button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+}
+
+.divisor {
+    width: 1px;
+    height: 20px;
+    background: #6b7280;
+}
+
+/* Botões de tema (claro / escuro) */
+.tema {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #6b7280;
+    border-radius: 999px;
+    padding: 4px;
+}
+
+.tema button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: var(--color-branco);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tema button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* precisa vir depois de .tema button para vencer na especificidade */
+.tema button.ativo {
+    background: var(--color-branco);
+    color: #1f2937;
+}
+
+/* RODAPÉ (o texto começa alinhado com a logo do cabeçalho) */
+.rodape {
+    background: var(--rodape);
+    color: #ffffff;
+    padding: 2rem 152px; /* 80px + 72px: alinhado com a logo */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    transition: background-color 0.3s;
+}
+
+.rodape p {
+    margin-bottom: 0.6rem;
+}
+
+.rodape a {
+    color: #ffffff;
+}
+
+/* RESPONSIVO DO CABEÇALHO E RODAPÉ */
+@media (max-width: 1200px) {
+    .header { padding: 0 40px; }
+    .logo-icone { margin-left: 0; }
+    .rodape { padding: 2rem 40px; }
+}
+
+/* Tablet: logo + botões na 1ª linha, menu na 2ª */
+@media (max-width: 992px) {
+    .header {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo acoes"
+            "menu menu";
+        height: auto;
+        padding: 12px 24px;
+        row-gap: 10px;
+    }
+    .logo1 { grid-area: logo; }
+    .acoes { grid-area: acoes; }
+    .menu  { grid-area: menu; }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .rodape { padding: 1.5rem 24px; }
+}
+
+@media (max-width: 768px) {
+    .menu a { padding: 8px 12px; }
+    .rodape { text-align: center; }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .header { padding: 10px 16px; }
+    .logo-texto { font-size: 17px; }
+    .logo2 img { width: 34px; height: 34px; }
+    .acoes { gap: 8px; }
+    .fonte button { padding: 4px 9px; font-size: 14px; }
+    .tema button { width: 28px; height: 28px; font-size: 14px; }
+    .rodape { padding: 1.5rem 16px; }
+}
+
+@media (max-width: 380px) {
+    .logo-texto { font-size: 15px; }
+    .menu a { font-size: 0.8rem; padding: 7px 10px; }
+    .fonte button { padding: 4px 7px; }
+}

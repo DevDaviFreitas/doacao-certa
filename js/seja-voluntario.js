@@ -1,36 +1,13 @@
-        var tamanhoFonte = 100; // tamanho da fonte em %
 
-        // Muda o tamanho da fonte da página inteira
-        function mudarFonte(valor) {
-            tamanhoFonte = tamanhoFonte + valor;
-            if (tamanhoFonte < 80) tamanhoFonte = 80;
-            if (tamanhoFonte > 140) tamanhoFonte = 140;
-            document.documentElement.style.fontSize = tamanhoFonte + "%";
-        }
-
-        // Troca entre tema claro e escuro
-        function mudarTema(tema) {
-            document.documentElement.setAttribute("data-tema", tema);
-            document.getElementById("tema-claro").classList.toggle("ativo", tema === "claro");
-            document.getElementById("tema-escuro").classList.toggle("ativo", tema === "escuro");
-        }
-
-        document.getElementById("diminuir-fonte").addEventListener("click", function () { mudarFonte(-10); });
-        document.getElementById("aumentar-fonte").addEventListener("click", function () { mudarFonte(10); });
-        document.getElementById("tema-claro").addEventListener("click", function () { mudarTema("claro"); });
-        document.getElementById("tema-escuro").addEventListener("click", function () { mudarTema("escuro"); });
 
 // ===== CADASTRO DE VOLUNTÁRIO =====
-// Este arquivo também é usado em outras páginas.
-// Por isso, só cadastramos o evento se o formulário existir na página.
+
 var formVoluntario = document.getElementById("form-voluntario");
 
 if (formVoluntario !== null) {
     formVoluntario.addEventListener("submit", function (evento) {
         evento.preventDefault(); // não recarrega a página
 
-        // Os campos com "required" o próprio HTML já confere.
-        // As caixas de "Como você pode ajudar?" a gente confere aqui.
         var caixas = document.getElementsByName("ajuda");
         var ajudas = "";
 
@@ -45,7 +22,7 @@ if (formVoluntario !== null) {
 
         if (ajudas === "") {
             document.getElementById("erro-ajuda").textContent = "Escolha pelo menos uma forma de ajuda.";
-            return; // para aqui e não mostra a confirmação
+            return; 
         }
         document.getElementById("erro-ajuda").textContent = "";
 

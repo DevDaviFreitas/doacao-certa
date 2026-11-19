@@ -1,4 +1,4 @@
-// ===== DADOS DOS ABRIGOS (simulados) =====
+// ===== DADOS DOS ABRIGOS  =====
 var abrigos = [
     { nome: "Igreja Nossa Senhora das Ilhas", tipo: "Igreja", regiao: "Ilhas", atualizado: "há 5 min", ocupacao: 118, capacidade: 120, sobra: "Roupas adultas usadas, Brinquedos.",
       precisa: [
@@ -57,7 +57,7 @@ function calcularPontos(abrigo, itemProcurado, regiao) {
     }
 }
 
-// ===== CARD DE UM ABRIGO =====
+// ===== CARD ABRIGO =====
 function montarCard(i, posicao, itemProcurado) {
     var a = abrigos[i];
     var pct = Math.round(a.ocupacao * 100 / a.capacidade);
