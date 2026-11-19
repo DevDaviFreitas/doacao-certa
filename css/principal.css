@@ -51,10 +51,10 @@ main, .div4-conteudo, .card-stat, .container-main4,
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 150px;
+    gap: clamp(2rem, 7vw, 5rem);
     max-width: 100%;
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px var(--page-padding);
     background: var(--color-fundo1);
 }
 
@@ -62,7 +62,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 .titulo-main1 {
@@ -148,7 +148,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
-    padding: 60px;
+    padding: 60px var(--page-padding);
     background: var(--color-fundo2);
 }
 
@@ -181,7 +181,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
     align-items: stretch;
     max-width: 100%;
     margin: 0 auto;
-    padding: 70px;
+    padding: 70px var(--page-padding);
     background: var(--color-fundo2);
 }
 
@@ -223,6 +223,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
 /* MAIN 4 (para quem) */
 .div4-conteudo {
     background-color: var(--color-fundo1);
+    padding-inline: var(--page-padding);
 }
 
 .titulo-div4 {
@@ -230,8 +231,8 @@ main, .div4-conteudo, .card-stat, .container-main4,
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--azul-profundo);
-    padding: 50px;
-    margin-left: 20px;
+    padding: 50px 0;
+    margin-left: 0;
 }
 
 .main4 {
@@ -241,7 +242,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
     align-items: stretch;
     max-width: 100%;
     margin: 0 auto;
-    padding: 70px;
+    padding: 70px var(--page-padding);
     background: var(--color-fundo1);
 }
 
@@ -269,7 +270,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
 /* MAIN 5 (3 passos) */
 .main5 {
     background: var(--color-fundo2);
-    padding: 70px;
+    padding: 70px var(--page-padding);
 }
 
 .conteudo-main5 {
@@ -351,7 +352,7 @@ main, .div4-conteudo, .card-stat, .container-main4,
 /* MAIN 6 (ODS) */
 .main6 {
     background: var(--color-fundo1);
-    padding: 70px;
+    padding: 70px var(--page-padding);
 }
 
 .conteudo-main6 {
@@ -441,7 +442,7 @@ body { overflow-x: hidden; }
     .main3,
     .main4,
     .main5,
-    .main6 { padding: 50px 40px; }
+    .main6 { padding-block: 50px; }
 
     .card-stat { max-width: 90%; margin-left: 5%; }
 }
@@ -453,7 +454,7 @@ body { overflow-x: hidden; }
     .main1 {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 40px 24px;
+        padding: 40px var(--page-gutter);
         text-align: center;
     }
     .main1-conteudo { margin-left: 0; align-items: center; }
@@ -462,12 +463,12 @@ body { overflow-x: hidden; }
     .img-casa-icone { max-width: 60%; }
 
     /* Main 2 */
-    .main2 { padding: 40px 24px; }
+    .main2 { padding: 40px var(--page-gutter); }
 
     /* Main 3: cards empilhados */
     .main3 {
         grid-template-columns: 1fr;
-        padding: 40px 24px;
+        padding: 40px var(--page-gutter);
     }
     .card-stat {
         max-width: 100%;
@@ -475,16 +476,16 @@ body { overflow-x: hidden; }
     }
 
     /* Main 4: 2 colunas */
-    .titulo-div4 { padding: 40px 24px 0; margin-left: 0; }
+    .titulo-div4 { padding: 40px 0 0; margin-left: 0; }
     .main4 {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
-        padding: 30px 24px 40px;
+        padding: 30px var(--page-gutter) 40px;
     }
     .container-main4 { padding: 24px; }
 
     /* Main 5 e 6 */
-    .main5, .main6 { padding: 40px 24px; }
+    .main5, .main6 { padding: 40px var(--page-gutter); }
     .card-main5, .card-main6 {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -513,7 +514,7 @@ body { overflow-x: hidden; }
 /* ---------- Celulares (até 600px) ---------- */
 @media (max-width: 600px) {
 
-    .main1 { padding: 30px 16px; }
+    .main1 { padding: 30px var(--page-gutter); }
     .subtitulo-main1 { font-size: 28px; }
     .img-casa-icone { max-width: 85%; }
 
@@ -523,12 +524,12 @@ body { overflow-x: hidden; }
     .main2,
     .main3,
     .main5,
-    .main6 { padding: 32px 16px; }
+    .main6 { padding: 32px var(--page-gutter); }
 
-    .titulo-div4 { padding: 32px 16px 0; }
+    .titulo-div4 { padding: 32px 0 0; }
     .main4 {
         grid-template-columns: 1fr;
-        padding: 24px 16px 32px;
+        padding: 24px var(--page-gutter) 32px;
     }
 
     .numero { font-size: 28px; }

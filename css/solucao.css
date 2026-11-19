@@ -61,9 +61,9 @@ body {
 
 .sol-container {
     width: 100%;
-    max-width: 68rem;
+    max-width: calc(var(--page-width) + 4rem);
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding: 0 var(--page-gutter);
 }
 
 /* ===== FAIXAS DE CONTEÚDO ===== */

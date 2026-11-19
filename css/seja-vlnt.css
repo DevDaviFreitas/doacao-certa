@@ -48,9 +48,9 @@ body {
 /* Limita a largura do conteúdo e centraliza */
 .container {
     width: 100%;
-    max-width: 62.5rem;
+    max-width: calc(var(--page-width) + 4rem);
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 var(--page-gutter);
 }
 
 
