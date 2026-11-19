@@ -1,3 +1,5 @@
+![Logo Doação Certa](logo-doacao-certa.jpeg)
+
 # Doação Certa
 
 Projeto acadêmico desenvolvido por estudantes do 1º ano de Engenharia de Software da FIAP (turma 1ESOR) para a **Global Solution 2026/2 — CitizenTech**.
