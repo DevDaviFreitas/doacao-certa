@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seja voluntário | Doação Certa</title>
     <link rel="icon" type="image/x-icon" href="/imagens/logo-doacao-certa.jpeg">
-    <link rel="stylesheet" href="../css/seja-vlnt.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/seja-vlnt.css">
 </head>
 
 <body>
@@ -57,7 +57,10 @@
             <h2>Cadastro de voluntário</h2>
             <p class="aviso-campos">Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
 
-            <form action="#" method="post">
+            <!-- Confirmação do cadastro (preenchida pelo JavaScript) -->
+            <div id="cadastro-sucesso" class="sucesso-cadastro" hidden></div>
+
+            <form id="form-voluntario" action="#" method="post">
 
                 <div class="campo">
                     <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
@@ -79,11 +82,12 @@
                     <label for="regiao">Região onde você pode ajudar <span class="obrigatorio">*</span></label>
                     <select id="regiao" name="regiao" required>
                         <option value="">Selecione a região</option>
-                        <option value="centro">Centro</option>
-                        <option value="zona-norte">Zona Norte</option>
-                        <option value="zona-sul">Zona Sul</option>
-                        <option value="zona-leste">Zona Leste</option>
-                        <option value="zona-oeste">Zona Oeste</option>
+                        <option>Centro</option>
+                        <option>Ilhas</option>
+                        <option>Jardim das Águas</option>
+                        <option>Morro Alto</option>
+                        <option>Porto Novo</option>
+                        <option>Vila Esperança</option>
                     </select>
                 </div>
 
@@ -92,25 +96,26 @@
                     <legend>Como você pode ajudar? <span class="obrigatorio">*</span> <small>(escolha pelo menos uma)</small></legend>
 
                     <div class="tipos-lista">
-                        <label><input type="checkbox" name="ajuda" value="saude"> Saúde e primeiros socorros</label>
-                        <label><input type="checkbox" name="ajuda" value="cozinha"> Cozinha</label>
-                        <label><input type="checkbox" name="ajuda" value="motorista"> Motorista com veículo</label>
-                        <label><input type="checkbox" name="ajuda" value="barco"> Barco ou resgate</label>
-                        <label><input type="checkbox" name="ajuda" value="triagem"> Triagem de doações</label>
-                        <label><input type="checkbox" name="ajuda" value="psicologico"> Apoio psicológico</label>
-                        <label><input type="checkbox" name="ajuda" value="criancas"> Cuidado com crianças</label>
-                        <label><input type="checkbox" name="ajuda" value="limpeza"> Limpeza e organização</label>
+                        <label><input type="checkbox" name="ajuda" value="Saúde e primeiros socorros"> Saúde e primeiros socorros</label>
+                        <label><input type="checkbox" name="ajuda" value="Cozinha"> Cozinha</label>
+                        <label><input type="checkbox" name="ajuda" value="Motorista com veículo"> Motorista com veículo</label>
+                        <label><input type="checkbox" name="ajuda" value="Barco ou resgate"> Barco ou resgate</label>
+                        <label><input type="checkbox" name="ajuda" value="Triagem de doações"> Triagem de doações</label>
+                        <label><input type="checkbox" name="ajuda" value="Apoio psicológico"> Apoio psicológico</label>
+                        <label><input type="checkbox" name="ajuda" value="Cuidado com crianças"> Cuidado com crianças</label>
+                        <label><input type="checkbox" name="ajuda" value="Limpeza e organização"> Limpeza e organização</label>
                     </div>
+                    <small id="erro-ajuda" class="erro-campo"></small>
                 </fieldset>
 
                 <div class="campo">
                     <label for="horario">Quando você pode ajudar? <span class="obrigatorio">*</span></label>
                     <select id="horario" name="horario" required>
                         <option value="">Selecione um horário</option>
-                        <option value="manha">Manhã</option>
-                        <option value="tarde">Tarde</option>
-                        <option value="noite">Noite</option>
-                        <option value="fim-de-semana">Fim de semana</option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                        <option>Fim de semana</option>
                     </select>
                 </div>
 
@@ -155,7 +160,7 @@
 
     <script src="../js/seja-voluntario.js"></script>
 
-    <!-- Biblioteca de ícones -->
+    <!-- ícones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

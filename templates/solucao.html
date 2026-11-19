@@ -1,13 +1,263 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Solução | Doação Certa</title>
 
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-doacao-certa.jpeg">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/solucao.css">
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <div class="logo1">
+            <a href="index.html" class="logo2">
+                <img src="../imagens/logo-doacao-certa.jpeg" alt="Logo Doação Certa" class="logo-icone">
+                <span class="logo-texto">Doação Certa</span>
+            </a>
+        </div>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="solucao.html" class="ativo" aria-current="page">Solução</a></li>
+                <li><a href="seja-voluntario.html">Seja voluntário</a></li>
+                <li><a href="impacto.html">Impacto</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+            </ul>
+        </nav>
+
+        <div class="acoes">
+            <!--Botões de tamanho da fonte-->
+            <div class="fonte">
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir fonte">A-</button>
+                <span class="divisor"></span>
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar fonte">A+</button>
+            </div>
+            <!--Botões de tema claro e escuro-->
+            <div class="tema">
+                <button type="button" id="tema-claro" class="ativo" aria-label="Tema claro"><ion-icon name="sunny-outline"></ion-icon></button>
+                <button type="button" id="tema-escuro" aria-label="Tema escuro"><ion-icon name="moon-outline"></ion-icon></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== APRESENTAÇÃO ===== -->
+        <section class="faixa faixa-azul">
+            <div class="sol-container">
+                <p class="etiqueta">A SOLUÇÃO</p>
+                <h1>Do que cada abrigo precisa, agora.</h1>
+                <p class="sol-intro">A Doação Certa é uma plataforma permanente, preparada antes do desastre. Quando a Defesa Civil ativa os abrigos, cada um informa o que falta e o que sobra, e quem quer ajudar descobre para onde levar.</p>
+            </div>
+        </section>
+
+        <!-- ===== COMO FUNCIONA ===== -->
+        <section class="faixa">
+            <div class="sol-container">
+                <h2>Como funciona</h2>
+                <div class="grade-3">
+                    <article class="sol-cartao">
+                        <h3>Antes: preparação</h3>
+                        <p>A prefeitura cadastra os locais que podem virar abrigo (escolas, ginásios, igrejas), com capacidade e responsável. Uma lista padrão de itens fica pronta.</p>
+                    </article>
+                    <article class="sol-cartao">
+                        <h3>Durante: resposta</h3>
+                        <p>O coordenador atualiza a ocupação e as necessidades. Você diz o que tem, vê os abrigos em ordem de urgência e confirma com “Vou levar”.</p>
+                    </article>
+                    <article class="sol-cartao">
+                        <h3>Depois: recuperação</h3>
+                        <p>Um relatório mostra o impacto. O que sobrou vai para bancos de alimentos e CRAS, e a lista padrão melhora para o próximo evento.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CRITÉRIOS DE ORDEM ===== -->
+        <section class="faixa faixa-azul">
+            <div class="sol-container">
+                <h2>Quem aparece primeiro, e por quê</h2>
+                <p class="sol-texto">Para cada abrigo que precisa do item que você tem, calculamos uma pontuação simples.<br>Cada card mostra o motivo da sua posição.</p>
+                <div class="grade-3">
+                    <article class="sol-cartao">
+                        <h3>Urgência</h3>
+                        <p>Alta vale 3 pontos, média vale 2 e baixa vale 1.</p>
+                    </article>
+                    <article class="sol-cartao">
+                        <h3>Perto de você</h3>
+                        <p>+2 pontos se o abrigo fica na sua região.</p>
+                    </article>
+                    <article class="sol-cartao">
+                        <h3>Abrigo lotado</h3>
+                        <p>+1 ponto se mais de 90% das vagas estão ocupadas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SIMULAÇÃO ===== -->
+        <section class="faixa" id="simulacao">
+            <div class="sol-container">
+                <h2>Simulação: para onde levar a sua doação?</h2>
+
+                <p class="aviso-simulacao">Dados simulados para demonstração: os abrigos e as regiões são fictícios. Ao recarregar a página, a simulação recomeça.</p>
+
+                <!-- Painel Falta × Sobra -->
+                <section class="sol-cartao painel">
+                    <h3>Painel Falta × Sobra</h3>
+                    <p class="painel-sub">Antes de comprar ou separar uma doação, veja o que os abrigos mais pedem e o que já está sobrando.</p>
+
+                    <div class="painel-colunas">
+                        <div>
+                            <h4>Está faltando</h4>
+                            <ul class="painel-lista">
+                                <li class="falta"><p><strong>Água potável</strong><span>urgente em 2 abrigos</span></p><button type="button" class="botao-contorno" onclick="verAbrigos('Água potável')">Ver abrigos</button></li>
+                                <li class="falta"><p><strong>Fraldas infantis</strong><span>urgente em 1 abrigo</span></p><button type="button" class="botao-contorno" onclick="verAbrigos('Fraldas infantis')">Ver abrigos</button></li>
+                                <li class="falta"><p><strong>Colchões</strong><span>urgente em 1 abrigo</span></p><button type="button" class="botao-contorno" onclick="verAbrigos('Colchões')">Ver abrigos</button></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Já sobra: evite doar agora</h4>
+                            <ul class="painel-lista">
+                                <li class="sobra"><p><strong>Roupas adultas usadas</strong><span>sobra em 4 abrigos</span></p></li>
+                                <li class="sobra"><p><strong>Calçados</strong><span>sobra em 2 abrigos</span></p></li>
+                                <li class="sobra"><p><strong>Brinquedos</strong><span>sobra em 2 abrigos</span></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="simulacao-grade">
+                    <!-- Formulário "Quero doar" -->
+                    <aside class="coluna-lateral">
+                        <form id="form-filtro" class="sol-cartao quero-doar">
+                            <h3>Quero doar</h3>
+
+                            <div class="sol-campo">
+                                <label for="filtro-item">O que você tem para doar?</label>
+                                <select id="filtro-item" name="item">
+                                    <option value="todos">Todos os itens</option>
+                                    <option>Água potável</option>
+                                    <option>Alimentos não perecíveis</option>
+                                    <option>Cobertores</option>
+                                    <option>Colchões</option>
+                                    <option>Fraldas infantis</option>
+                                    <option>Kit de primeiros socorros</option>
+                                    <option>Leite em pó</option>
+                                    <option>Produtos de limpeza</option>
+                                </select>
+                            </div>
+
+                            <div class="sol-campo">
+                                <label for="filtro-regiao">Em que região você está?</label>
+                                <select id="filtro-regiao" name="regiao" aria-describedby="dica-regiao">
+                                    <option value="">Prefiro não informar</option>
+                                    <option>Centro</option>
+                                    <option>Ilhas</option>
+                                    <option>Morro Alto</option>
+                                    <option>Porto Novo</option>
+                                    <option>Vila Esperança</option>
+                                </select>
+                                <small id="dica-regiao">Abrigos na sua região ganham +2 pontos.</small>
+                            </div>
+
+                            <button type="submit" class="botao-laranja botao-largo">Mostrar para onde levar</button>
+                        </form>
+
+                        <!-- Doações salvas -->
+                        <section class="sol-cartao minhas-doacoes">
+                            <h3>Doações combinadas</h3>
+                            <ul id="lista-doacoes">
+                                <li class="vazio">Quando você clicar em “Vou levar” e confirmar, a doação aparece aqui.</li>
+                            </ul>
+                        </section>
+                    </aside>
+
+                    <!-- Resultado -->
+                    <section class="resultado" aria-labelledby="titulo-resultado">
+                        <h3 id="titulo-resultado">Para onde levar</h3>
+                        <p id="resumo-resultado" class="resumo-resultado"></p>
+                        <ol id="lista-abrigos" class="lista-abrigos"></ol>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="sol-container">
+            <p><strong>Doação Certa</strong> · Projeto acadêmico — FIAP Global Solution 2026/2 (CitizenTech)</p>
+            <p>Os abrigos e números da simulação são fictícios. Os dados reais citados no site têm a fonte indicada.</p>
+            <p><a href="equipe.html">Fontes e créditos</a></p>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL "VOU LEVAR" ===== -->
+    <!-- O próprio HTML confere os campos: required, type="email" e min/max -->
+    <dialog id="modal-doacao" class="modal">
+        <div class="modal-topo">
+            <h2 id="modal-titulo">Confirmar doação</h2>
+            <button type="button" class="modal-fechar" onclick="fecharModal()" aria-label="Fechar">&times;</button>
+        </div>
+
+        <!-- Parte 1: formulário -->
+        <form id="form-doacao" class="modal-corpo">
+            <div class="modal-resumo">
+                <p><span>Local de entrega</span><strong id="modal-local"></strong></p>
+                <p id="modal-endereco" class="modal-endereco"></p>
+                <p><span>Item</span><strong id="modal-item"></strong></p>
+            </div>
+
+            <div class="sol-campo">
+                <label for="doador-nome">Nome completo <span class="obrigatorio">*</span></label>
+                <input type="text" id="doador-nome" required>
+            </div>
+
+            <div class="sol-campo">
+                <label for="doador-telefone">Telefone ou WhatsApp <span class="obrigatorio">*</span></label>
+                <input type="tel" id="doador-telefone" placeholder="(51) 99999-1234" required>
+            </div>
+
+            <div class="sol-campo">
+                <label for="doador-email">E-mail <span class="obrigatorio">*</span></label>
+                <input type="email" id="doador-email" required>
+            </div>
+
+            <div class="sol-campo">
+                <label for="doador-quantidade">Quantidade que você vai levar <span class="obrigatorio">*</span></label>
+                <input type="number" id="doador-quantidade" min="1" required>
+            </div>
+
+            <p class="modal-aviso">Simulação: nenhum dado é enviado a ninguém.</p>
+
+            <div class="modal-botoes">
+                <button type="button" class="botao-contorno" onclick="fecharModal()">Cancelar</button>
+                <button type="submit" class="botao-laranja">Confirmar doação</button>
+            </div>
+        </form>
+
+        <!-- Parte 2: confirmação -->
+        <div id="modal-sucesso" class="modal-corpo" hidden>
+            <div class="modal-ok">
+                <h3 id="sucesso-titulo"></h3>
+                <dl id="sucesso-dados" class="lista-dados"></dl>
+            </div>
+            <div class="modal-botoes">
+                <button type="button" class="botao-laranja" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/solucao.js"></script>
+
+    <!-- Biblioteca de ícones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
